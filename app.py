@@ -228,7 +228,7 @@ def display_welcome_screen():
     with col1:
         st.markdown("### Welcome to AgriMarket AI")
     with col2:
-        welcome_text = "Welcome to AgriMarket AI, your ML-powered agricultural market analysis and trend prediction platform. This app helps farmers analyze crop prices, get AI insights, and find government support schemes."
+        welcome_text = "Welcome to AgriMarket AI. Select your crop and location to get current price, tomorrow prediction, volume traded, and market trend."
         text_to_speech_component(welcome_text, "🔊 Read Introduction")
     
     col1, col2, col3 = st.columns(3)
@@ -303,7 +303,14 @@ def display_analysis_results(crop, location, market_data, weather_data, historic
         with col1:
             st.info(f"**Market Summary**: {market_summary}")
         with col2:
-            text_to_speech_component(f"Market Summary for {crop} in {location}: {market_summary}", "🔊 Read Summary")
+            # Read only key metrics: current price, tomorrow prediction, volume traded, market trend
+            current_price = market_data.get('current_price', 0)
+            tomorrow_price = future_predictions[0] if future_predictions else current_price
+            volume = market_data.get('volume_traded', 0)
+            trend = market_data.get('trend', 'Stable')
+            
+            key_metrics_text = f"Current price: {current_price:.0f} rupees. Tomorrow prediction: {tomorrow_price:.0f} rupees. Volume traded: {volume:.0f} tonnes. Market trend: {trend}."
+            text_to_speech_component(key_metrics_text, "🔊 Read Key Metrics")
         with col3:
             stop_speech_component()
     
@@ -335,13 +342,14 @@ def display_analysis_results(crop, location, market_data, weather_data, historic
         with col1:
             st.header("🧠 AI Market Insights")
         with col2:
-            # Create readable AI insights summary
-            insights_text = f"AI Market Insights for {crop}. "
-            if ai_analysis.get('overall_sentiment'):
-                insights_text += f"Overall market sentiment is {ai_analysis['overall_sentiment']}. "
-            if ai_analysis.get('key_insights'):
-                insights_text += "Key insights: " + ". ".join(ai_analysis['key_insights'][:3]) + ". "
-            text_to_speech_component(insights_text, "🔊 Read AI Insights")
+            # Read only key metrics: current price, tomorrow prediction, volume traded, market trend
+            current_price = market_data.get('current_price', 0)
+            tomorrow_price = future_predictions[0] if future_predictions else current_price
+            volume = market_data.get('volume_traded', 0)
+            trend = market_data.get('trend', 'Stable')
+            
+            metrics_text = f"Current price: {current_price:.0f} rupees. Tomorrow prediction: {tomorrow_price:.0f} rupees. Volume traded: {volume:.0f} tonnes. Market trend: {trend}."
+            text_to_speech_component(metrics_text, "🔊 Read Metrics")
         
         display_ai_analysis(ai_analysis, ai_recommendations, price_factors)
     
@@ -352,12 +360,14 @@ def display_analysis_results(crop, location, market_data, weather_data, historic
         with col1:
             st.header("🏛️ Government Schemes & Support")
         with col2:
-            # Create readable schemes summary
-            schemes_text = f"Government support schemes for {crop} farmers. "
-            if relevant_schemes:
-                top_schemes = [scheme['name'] for scheme in relevant_schemes[:3]]
-                schemes_text += f"Top recommended schemes are: {', '.join(top_schemes)}. "
-            text_to_speech_component(schemes_text, "🔊 Read Schemes")
+            # Read only key metrics: current price, tomorrow prediction, volume traded, market trend
+            current_price = market_data.get('current_price', 0)
+            tomorrow_price = future_predictions[0] if future_predictions else current_price
+            volume = market_data.get('volume_traded', 0)
+            trend = market_data.get('trend', 'Stable')
+            
+            metrics_text = f"Current price: {current_price:.0f} rupees. Tomorrow prediction: {tomorrow_price:.0f} rupees. Volume traded: {volume:.0f} tonnes. Market trend: {trend}."
+            text_to_speech_component(metrics_text, "🔊 Read Metrics")
         
         display_government_schemes(relevant_schemes)
     
@@ -411,13 +421,14 @@ def display_price_comparison_table(market_data, future_predictions):
     with col1:
         st.subheader("📅 Price Comparison Table")
     with col2:
-        # Create readable price comparison
+        # Read only key metrics: current price, tomorrow prediction, volume traded, market trend
         current_price = market_data.get('current_price', 0)
-        yesterday_price = market_data.get('yesterday_price', current_price)
         tomorrow_price = future_predictions[0] if future_predictions else current_price
+        volume = market_data.get('volume_traded', 0)
+        trend = market_data.get('trend', 'Stable')
         
-        price_text = f"Price comparison: Yesterday was {yesterday_price:.0f} rupees, today is {current_price:.0f} rupees, tomorrow is predicted to be {tomorrow_price:.0f} rupees per quintal."
-        text_to_speech_component(price_text, "🔊 Read Prices")
+        metrics_text = f"Current price: {current_price:.0f} rupees. Tomorrow prediction: {tomorrow_price:.0f} rupees. Volume traded: {volume:.0f} tonnes. Market trend: {trend}."
+        text_to_speech_component(metrics_text, "🔊 Read Metrics")
     
     current_price = market_data.get('current_price', 0)
     yesterday_price = market_data.get('yesterday_price', current_price)
